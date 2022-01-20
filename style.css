@@ -12,10 +12,6 @@
     --purple: #BB99DD;
 }
 
-body {
-    
-}
-
 .container {
     display:flex;
     flex-direction: column;
@@ -23,6 +19,9 @@ body {
     align-items: center;
     width: 100vw;
     height: 100vh;
+    animation-name: fade;
+    animation-duration: 1s;
+
 }
 
 .perfil {
@@ -31,10 +30,18 @@ body {
     border-radius: 180px;
     padding: 5px;
     border: 2px purple solid;
+    animation-name: move;
+    animation-duration: 1s;
+    animation-fill-mode: backwards;
+    
 }
 
 .container p{
     margin-top: 10px;
+    animation-name: move;
+    animation-duration: 1s;
+    animation-delay: 50ms;
+    animation-fill-mode: backwards;
    
 }
 
@@ -60,6 +67,33 @@ body {
     cursor: pointer;
 }
 
+.linksList a:nth-child(1){
+    animation-name: move;
+    animation-duration: 1s;
+    animation-delay: 100ms;
+}
+
+.linksList a:nth-child(2){
+    animation-name: move;
+    animation-duration: 1s;
+    animation-delay: 150ms;
+    animation-fill-mode: backwards;
+}
+
+.linksList a:nth-child(3){
+    animation-name: move;
+    animation-duration: 1s;
+    animation-delay: 200ms;
+    animation-fill-mode: backwards;
+}
+
+.linksList a:nth-child(4){
+    animation-name: move;
+    animation-duration: 1s;
+    animation-delay: 250ms;
+    animation-fill-mode: backwards;
+}
+
 .linksList a:hover{
     background: #BB99DD;
     color: white;
@@ -71,7 +105,10 @@ body {
     width: 236px;
     height:24px;
     margin-top: 30px;
-
+    animation-name: move;
+    animation-duration: 1s;
+    animation-delay: 300ms;
+    animation-fill-mode: backwards;
 }
 
 footer {
@@ -80,4 +117,26 @@ footer {
     align-items: center;
     height: 3rem;
     margin-top: 10px;
+}
+
+@keyframes move {
+    from{
+      opacity: 0;  
+      transform: translateX(-100%);  
+    }
+    to {
+      opacity: 1;  
+      transform: translateX(0%);
+    }
+}
+
+@keyframes fade {
+    from{
+      opacity: 0;  
+      transform: scale(0.7);  
+    }
+    to {
+      opacity: 1;  
+      transform: scale(1);
+    }
 }
